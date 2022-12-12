@@ -1,0 +1,22 @@
+<script>
+function copyLink() {
+  var dummy = document.createElement('input'),
+  text = window.location.href;
+
+  document.body.appendChild(dummy);
+  dummy.value = text;
+  dummy.select();
+  document.execCommand('copy');
+  document.body.removeChild(dummy);
+  
+  document.querySelector('.post__share__copy').innerHTML="Link copied!";
+  
+  var copyBtn ='<i class="fa fa-clone"></i>Copy link';
+  
+  
+  setTimeout(function() {
+  document.querySelector('.post__share__copy').innerHTML= copyBtn;
+            }.bind(this), 750);
+  
+}
+</script>
