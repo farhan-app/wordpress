@@ -18,10 +18,12 @@
 </html>
 
 <style>
+/*LIGHT THEME CSS VARIABLES HERE*/
   body{
     --landing-color: #fff;
   }
   
+/*DARK THEME CSS VARIABLES HERE*/
   body.dark{
     --landing-color: #000;
   }
@@ -73,7 +75,6 @@ themeToggleBtn.addEventListener('click', function() {
 			document.querySelector('.moon').style.display = "block"; 
         }
 
-    // if NOT set via local storage previously
     } else {
         if (document.body.classList.contains('dark')) {
             document.body.classList.remove('dark');
